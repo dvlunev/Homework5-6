@@ -1,19 +1,25 @@
-package hw55.dao.impl;
+package hw56.dao.impl;
 
-import hw55.dao.EmployeeDao;
-import hw55.model.Employee;
+import hw56.dao.CityDao;
+import hw56.dao.EmployeeDao;
+import hw56.model.Employee;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
-import hw55.config.HibernateSessionFactoryUtil;
+import hw56.config.HibernateSessionFactoryUtil;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class EmployeeDaoImpl implements EmployeeDao {
 
+    private final CityDao cityDao = new CityDaoImpl();
 
     @Override
     public void createOrUpdateEmployee(Employee employee) {
+        if (employee.getCity() != null && cityDao.findById(employee.getCity().getCityId()).isEmpty()) {
+            employee.setCity(null);
+        }
         try(Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession()) {
             Transaction transaction = session.beginTransaction();
             session.saveOrUpdate(employee);
@@ -22,8 +28,10 @@ public class EmployeeDaoImpl implements EmployeeDao {
     }
 
     @Override
-    public Employee getEmployeeById(int id) {
-        return HibernateSessionFactoryUtil.getSessionFactory().openSession().get(Employee.class, id);
+    public Optional<Employee> getEmployeeById(long id) {
+        try (Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession()) {
+            return Optional.ofNullable(session.get(Employee.class, id));
+        }
     }
 
     @Override
