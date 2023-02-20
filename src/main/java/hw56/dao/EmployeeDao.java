@@ -1,13 +1,14 @@
-package hw55.dao;
+package hw56.dao;
 
-import hw55.model.Employee;
+import hw56.entity.Employee;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface EmployeeDao {
 
     void createOrUpdateEmployee(Employee employee);
-    Employee getEmployeeById(int id);
+    Optional<Employee> getEmployeeById(long id);
     List<Employee> getAllEmployeeList();
     void deleteEmployee(Employee employee);
 }
