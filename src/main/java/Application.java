@@ -5,6 +5,9 @@ import hw56.dao.impl.EmployeeDaoImpl;
 import hw56.model.City;
 import hw56.model.Employee;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Application {
 
     public static void main(String[] args) {
@@ -14,34 +17,38 @@ public class Application {
         City city1 = new City(1,"Saint-Petersburg");
         City city3 = new City(3,"Sevastopol");
 
-//        employeeDao.createOrUpdateEmployee(new Employee("Andrei", "Andreev","male",29, city3));
-
         employeeDao.createOrUpdateEmployee(new Employee(23,"Dmitrii", "Lunev","male",32, city1));
 
         System.out.println(employeeDao.getEmployeeById(3));
 
         employeeDao.getAllEmployeeList().forEach(employee -> System.out.println(employee));
 
-//        employeeDao.deleteEmployee(new Employee(20,"Andrei", "Andreev","male",29, city3));
+        employeeDao.deleteEmployee(new Employee(20,"Andrei", "Andreev","male",29, city3));
 
         employeeDao.getAllEmployeeList().forEach(employee -> System.out.println(employee));
 
         CityDao cityDao = new CityDaoImpl();
 
-//        cityDao.createOrUpdateCity(new City("Tver"));
+        City city4 = new City("Tver");
 
-        cityDao.createOrUpdateCity(new City(3, "Sevastopol"));
+        List<Employee> employees = new ArrayList<>();
 
-//        System.out.println(cityDao.getCityById(3));
+        employees.add(new Employee("Andrei", "Andreev","male",29, city4));
+
+        city4.setEmployees(employees);
+
+        cityDao.createOrUpdateCity(city4);
+
+        System.out.println(cityDao.getCityById(3));
 
         employeeDao.getAllEmployeeList().forEach(employee -> System.out.println(employee));
 
-//        cityDao.getAllCityList().forEach(city -> System.out.println(city));
+        cityDao.getAllCityList().forEach(city -> System.out.println(city));
 
-        cityDao.deleteCity(city3);
+        cityDao.deleteCity(city4);
 
         employeeDao.getAllEmployeeList().forEach(employee -> System.out.println(employee));
 
-//        cityDao.getAllCityList().forEach(city -> System.out.println(city));
+        cityDao.getAllCityList().forEach(city -> System.out.println(city));
     }
 }

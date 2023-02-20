@@ -4,18 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4e4234b4-61c4-4ddf-beb0-6ea5c04afcac" name="Changes" comment="первый коммит">
-      <change afterPath="$PROJECT_DIR$/src/main/java/hw56/dao/CityDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hw56/dao/impl/CityDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hw56/model/City.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="4e4234b4-61c4-4ddf-beb0-6ea5c04afcac" name="Changes" comment="сделано ДЗ">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hw55/config/HibernateSessionFactoryUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hw56/config/HibernateSessionFactoryUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hw55/dao/EmployeeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hw56/dao/EmployeeDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hw55/dao/impl/EmployeeDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hw56/dao/impl/EmployeeDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hw55/model/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hw56/model/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hw56/model/City.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hw56/model/City.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +68,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1676879903611</updated>
-      <workItem from="1676879906039" duration="13889000" />
+      <workItem from="1676879906039" duration="16696000" />
     </task>
     <task id="LOCAL-00001" summary="первый коммит">
       <created>1676880768521</created>
@@ -85,7 +77,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676880768521</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="сделано ДЗ">
+      <created>1676908303278</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1676908303278</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -104,6 +103,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="первый коммит" />
-    <option name="LAST_COMMIT_MESSAGE" value="первый коммит" />
+    <MESSAGE value="сделано ДЗ" />
+    <option name="LAST_COMMIT_MESSAGE" value="сделано ДЗ" />
   </component>
 </project>
