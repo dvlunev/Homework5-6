@@ -2,7 +2,7 @@ package hw56.dao.impl;
 
 import hw56.config.HibernateSessionFactoryUtil;
 import hw56.dao.CityDao;
-import hw56.model.City;
+import hw56.entity.City;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
@@ -43,6 +43,7 @@ public class CityDaoImpl implements CityDao {
     public void deleteCity(City city) {
         try(Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession()) {
             Transaction transaction = session.beginTransaction();
+            city = session.load(City.class,city.getCityId());
             session.delete(city);
             transaction.commit();
         }

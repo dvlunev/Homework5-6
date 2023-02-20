@@ -1,6 +1,6 @@
 package hw56.dao;
 
-import hw56.model.Employee;
+import hw56.entity.Employee;
 
 import java.util.List;
 import java.util.Optional;

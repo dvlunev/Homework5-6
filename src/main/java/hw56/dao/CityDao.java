@@ -1,6 +1,6 @@
 package hw56.dao;
 
-import hw56.model.City;
+import hw56.entity.City;
 
 import java.util.List;
 import java.util.Optional;

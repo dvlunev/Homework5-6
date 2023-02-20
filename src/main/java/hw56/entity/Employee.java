@@ -1,4 +1,4 @@
-package hw56.model;
+package hw56.entity;
 
 import javax.persistence.*;
 import java.util.Objects;

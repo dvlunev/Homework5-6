@@ -2,7 +2,7 @@ package hw56.dao.impl;
 
 import hw56.dao.CityDao;
 import hw56.dao.EmployeeDao;
-import hw56.model.Employee;
+import hw56.entity.Employee;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import hw56.config.HibernateSessionFactoryUtil;

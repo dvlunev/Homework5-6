@@ -1,7 +1,7 @@
 package hw56.config;
 
-import hw56.model.City;
-import hw56.model.Employee;
+import hw56.entity.City;
+import hw56.entity.Employee;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;

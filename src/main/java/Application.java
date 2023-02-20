@@ -2,8 +2,8 @@ import hw56.dao.CityDao;
 import hw56.dao.EmployeeDao;
 import hw56.dao.impl.CityDaoImpl;
 import hw56.dao.impl.EmployeeDaoImpl;
-import hw56.model.City;
-import hw56.model.Employee;
+import hw56.entity.City;
+import hw56.entity.Employee;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -50,5 +50,7 @@ public class Application {
         employeeDao.getAllEmployeeList().forEach(employee -> System.out.println(employee));
 
         cityDao.getAllCityList().forEach(city -> System.out.println(city));
+
+        cityDao.deleteCity(city3);
     }
 }
